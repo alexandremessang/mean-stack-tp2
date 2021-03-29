@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 // Services
 import { CatService } from './services/cat.service';
+import { CharacterService } from './services/character.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
 import { AuthGuardLogin } from './services/auth-guard-login.service';
@@ -21,6 +22,11 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { CharactersComponent } from './characters/characters.component';
+import { AddCharacterFormComponent } from './add-character-form/add-character-form.component';
+import { MoviesComponent } from './movies/movies.component';
+import { AddMovieFormComponent } from './add-movie-form/add-movie-form.component';
+import { MovieService } from './services/movie.service';
 
 @NgModule({
   declarations: [
@@ -33,8 +39,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
     LogoutComponent,
     AccountComponent,
     AdminComponent,
-    NotFoundComponent
-  ],
+    NotFoundComponent,
+    CharactersComponent,
+    AddCharacterFormComponent,
+    MoviesComponent,
+    AddMovieFormComponent,
+   ],
   imports: [
     AppRoutingModule,
     SharedModule,
@@ -50,6 +60,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AuthGuardLogin,
     AuthGuardAdmin,
     CatService,
+    CharacterService,
+    MovieService,
     UserService
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
